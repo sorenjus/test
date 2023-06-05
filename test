@@ -4,7 +4,38 @@
 int find_max_sum(int *numbers, int size)
 {
 	// Waiting to be implemented
-    return -1;
+    int sum = 0;
+    int first = 0;
+    int second = 0;
+    int larger = 1;
+    for (size_t i = 0; i < size; i++)
+    {
+        if(i == 0){
+            first = numbers[i];
+        }
+        else if(i == 1){
+            second = numbers[i];
+            if(second < first){
+                larger = 0;
+            }
+        }
+        else{
+            if(larger == 0){
+                if(second < numbers[i]){
+                    second = numbers[i];
+                }
+            }
+            else{
+                if(first < numbers[i]){
+                    first = numbers[i];
+                }
+            }
+        }
+    }
+
+    sum = first + second;
+    
+    return sum;
 }
 
 #ifndef RunTests
