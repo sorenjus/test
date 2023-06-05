@@ -1,0 +1,18 @@
+#include <stdlib.h>
+#include <stdio.h>
+#include <limits.h>
+
+int GetMax(int array[], int length)
+{
+    return INT_MAX;
+}
+
+#ifndef RunTests
+int main()
+{
+    int test_array[] = {5, 4, 3, 6, 2, 0};
+    printf("getMax returned: %d\n", GetMax(test_array, 6));
+    for
+    return 0;
+}
+#endif
