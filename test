@@ -12,7 +12,19 @@ int main()
 {
     int test_array[] = {5, 4, 3, 6, 2, 0};
     printf("getMax returned: %d\n", GetMax(test_array, 6));
-    for
-    return 0;
+    int largest = -999;
+    for (size_t i = 0; i < 6; i++)
+    {
+        if(i == 0){
+            largest = test_array[i];
+        }
+        else{
+            if(largest < test_array[i]){
+                largest = test_array[i];
+            }
+        }
+    }
+    
+    return largest;
 }
 #endif
