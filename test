@@ -1,30 +1,16 @@
-#include <stdlib.h>
 #include <stdio.h>
-#include <limits.h>
+#include <stdlib.h>
 
-int GetMax(int array[], int length)
+int find_max_sum(int *numbers, int size)
 {
-    return INT_MAX;
+	// Waiting to be implemented
+    return -1;
 }
 
 #ifndef RunTests
 int main()
 {
-    int test_array[] = {5, 4, 3, 6, 2, 0};
-    printf("getMax returned: %d\n", GetMax(test_array, 6));
-    int largest = -999;
-    for (size_t i = 0; i < 6; i++)
-    {
-        if(i == 0){
-            largest = test_array[i];
-        }
-        else{
-            if(largest < test_array[i]){
-                largest = test_array[i];
-            }
-        }
-    }
-    
-    return largest;
+    int v[] = { 5, 9, 7, 11 };
+    printf("%d", find_max_sum(v, 4));
 }
 #endif
