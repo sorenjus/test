@@ -1,47 +1,23 @@
 #include <stdio.h>
-#include <stdlib.h>
 
-int find_max_sum(int *numbers, int size)
+typedef struct Node
 {
-	// Waiting to be implemented
-    int sum = 0;
-    int first = 0;
-    int second = 0;
-    int larger = 1;
-    for (size_t i = 0; i < size; i++)
-    {
-        if(i == 0){
-            first = numbers[i];
-        }
-        else if(i == 1){
-            second = numbers[i];
-            if(second < first){
-                larger = 0;
-            }
-        }
-        else{
-            if(larger == 0){
-                if(second < numbers[i]){
-                    second = numbers[i];
-                }
-            }
-            else{
-                if(first < numbers[i]){
-                    first = numbers[i];
-                }
-            }
-        }
-    }
+    struct Node* left_child;
+    struct Node* right_child;
+} Node;
 
-    sum = first + second;
-    
-    return sum;
+int height(Node* node)
+{
+    return -1;
 }
 
 #ifndef RunTests
 int main()
 {
-    int v[] = { 5, 9, 7, 11 };
-    printf("%d", find_max_sum(v, 4));
+    Node leaf_1 = {NULL, NULL};
+    Node leaf_2 = {NULL, NULL};
+    Node node = {&leaf_1, NULL};
+    Node root = {&node, &leaf_2};
+    printf("%d\n", height(&root));
 }
 #endif
